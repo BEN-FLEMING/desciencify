@@ -1,0 +1,7 @@
+langchain
+PIL
+streamlit
+os
+dotenv
+streamlit_extras
+openai
