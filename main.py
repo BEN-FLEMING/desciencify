@@ -2,11 +2,7 @@ import streamlit as st
 from PIL import Image
 from langchain import PromptTemplate
 from langchain.llms import OpenAI
-import os
-from dotenv import load_dotenv
 from streamlit_extras.buy_me_a_coffee import button
-
-load_dotenv()
 
 API_KEY = st.secrets("OPENAI_API_KEY")
 

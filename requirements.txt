@@ -1,6 +1,5 @@
 langchain
 Pillow
 streamlit
-dotenv
 streamlit_extras
 openai
