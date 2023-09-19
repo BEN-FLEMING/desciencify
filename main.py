@@ -4,7 +4,7 @@ from langchain import PromptTemplate
 from langchain.llms import OpenAI
 from streamlit_extras.buy_me_a_coffee import button
 
-API_KEY = st.secrets("OPENAI_API_KEY")
+API_KEY = st.secrets("apikey")
 
 template = """
     Below is a scientific abstract that has many inaccessible scientific terms.
@@ -79,9 +79,9 @@ if abstract_input:
 
     prompt_with_abstract = prompt.format(length=option_summary_type,audience=option_five_year_old,abstract=abstract_input)
 
-    #formatted_abstract = llm(prompt_with_abstract)
+    formatted_abstract = llm(prompt_with_abstract)
 
-    st.write(prompt_with_abstract)
+    st.write(formatted_abstract)
 
 st.write("###")
 
