@@ -4,8 +4,6 @@ from langchain import PromptTemplate
 from langchain.llms import OpenAI
 from streamlit_extras.buy_me_a_coffee import button
 
-API_KEY = st.secrets["OPENAI_API_KEY"]
-
 template = """
     Below is a scientific abstract that has many inaccessible scientific terms.
     Your ultimate goal is to:
@@ -33,7 +31,7 @@ prompt = PromptTemplate(
 
 def load_LLM():
     """logic for loading the chain you want here"""
-    llm = OpenAI(temperature=.5, openai_api_key=API_KEY)
+    llm = OpenAI(temperature=.5)
     return llm
 
 llm = load_LLM()
