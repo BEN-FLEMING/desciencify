@@ -4,7 +4,7 @@ from langchain import PromptTemplate
 from langchain.llms import OpenAI
 from streamlit_extras.buy_me_a_coffee import button
 
-API_KEY = st.secrets["apikey"]
+API_KEY = st.secrets["OPENAI_API_KEY"]
 
 template = """
     Below is a scientific abstract that has many inaccessible scientific terms.
